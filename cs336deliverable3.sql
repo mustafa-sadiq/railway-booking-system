@@ -2,13 +2,13 @@ create database if not exists cs336deliverable3;
 use cs336deliverable3;
 
 drop table if exists reservation_destination;
+drop table if exists reservation_origin;
+drop table if exists reservation_on;
 drop table if exists reserves;
 drop table if exists reservation;
-drop table if exists reservation_on;
 drop table if exists stops;
 drop table if exists support;
 drop table if exists questions;
-drop table if exists reservation_origin;
 drop table if exists customers;
 drop table if exists employees;
 drop table if exists schedules;
