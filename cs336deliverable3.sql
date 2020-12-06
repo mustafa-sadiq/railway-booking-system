@@ -95,8 +95,8 @@ Insert into employees values ("111-11-1111", "Gary", "Gary", "employee1", "emplo
 Insert into questions values ("parth123", 1, "hello?"),
 							("mustu123", 2, "hi?");
 
-Insert into support values ("employee1", 1, "parth123", "12-02-2020", "sup"),
-						("employee2", 2, "mustu123", "12-02-2020", "sup?");
+Insert into support values ("employee1", 1, "parth123", '2020-02-12', "sup"),
+						("employee2", 2, "mustu123", '2020-02-12', "sup?");
                         
 Insert into schedules values (0001, "North", 1),
 							(0001, "North", 2),
