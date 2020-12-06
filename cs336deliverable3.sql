@@ -1,13 +1,18 @@
---
--- create database
--- 
+create database if not exists cs336deliverable3;
+use cs336deliverable3;
 
-create database if not exists cs336;
-use cs336;
-
---
--- customers and employees
---
+drop table if exists reservation_destination;
+drop table if exists reserves;
+drop table if exists reservation;
+drop table if exists reservation_on;
+drop table if exists stops;
+drop table if exists support;
+drop table if exists questions;
+drop table if exists reservation_origin;
+drop table if exists customers;
+drop table if exists employees;
+drop table if exists schedules;
+drop table if exists stations;
 
 create table customers (cust_first varchar(25), cust_last varchar(25), cust_email varchar(50),
 cust_username varchar(30), cust_password varchar(30), 
