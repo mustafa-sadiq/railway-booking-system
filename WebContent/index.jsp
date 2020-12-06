@@ -12,8 +12,7 @@
 <body>
 
 
-<% out.println("Enter your account information"); %> <!-- output the same thing, but using 
-                                      jsp programming -->
+<% out.println("Enter your account information"); %> 
 
 <br>
 	<form method="get" action="checkLoginDetails.jsp">
