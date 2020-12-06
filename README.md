@@ -3,7 +3,9 @@
 ## Due Date: Dec 17, 2020 11:55 pm
 
 ### Database
-jdbc:mysql://database-1.ctievvwhg6rk.ca-central-1.rds.amazonaws.com:3306/cs336deliverable3 
+endpoint: database-1.ctievvwhg6rk.ca-central-1.rds.amazonaws.com
+
+port: 3306
 
 username: cs336database
 
