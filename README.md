@@ -11,9 +11,9 @@ password: cs336database
 
 ### Checklist
 #### I. Account functionality (10 points)
-- [ ] register customers
-- [ ] login (for all customers, admin, customer reps)
-- [ ] logout (for all customers, admin, customer reps)
+- [X] register customers
+- [X] login (for all customers, admin, customer reps)
+- [X] logout (for all customers, admin, customer reps)
 
 #### II. Browsing and search functionality (15 points)
 - [ ] search for train schedules by origin, destination, date of travel (5 points)
