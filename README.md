@@ -31,7 +31,7 @@ password: cs336database
 
 #### IV. Admin functions (30 points)
 - [ ] Admin (create an admin account ahead of time)
-  - [ ] add, edit and delete information for a customer representative (9 points)
+  - [X] add, edit and delete information for a customer representative (9 points)
   - [ ] obtain sales reports per month (3 points)
   - [ ] produce a list of reservations: (5 points)
     - [ ] by transit line
