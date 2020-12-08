@@ -2,14 +2,29 @@
 
 ## Due Date: Dec 17, 2020 11:55 pm
 
+### Submission checklist
+- [ ] Project code (zip file)
+- [ ] Schema SQL file
+- [ ] ER Diagram
+- [ ] README
+  - [ ] EC2 URL
+  - [ ] Amazon EC2 and Apache Tomcat credentials (PEM file)
+  - [ ] List that apportions credit
+  - [ ] Admin credentials to application 
+- [ ] Project Checklist
+- [ ] Project Video
+
+
 ### Database
-endpoint: database-1.ctievvwhg6rk.ca-central-1.rds.amazonaws.com
+endpoint: database-1.ctievvwhg6rk.ca-central-1.rds.amazonaws.com  
+port: 3306  
+username: cs336database  
+password: cs336database  
 
-port: 3306
-
-username: cs336database
-
-password: cs336database
+### EC2 
+http://ec2-15-222-65-117.ca-central-1.compute.amazonaws.com:8080/cs336deliverable3/  
+username: cs336group30  
+password: cs336group30  
 
 ### Checklist
 #### I. Account functionality (10 points)
