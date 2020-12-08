@@ -1,3 +1,7 @@
+--
+-- this query will show you the schedules going from origin to destination and the cost of that trip
+--
+
 set @origin_id = (select station_id
 		from STATIONS
 		where station_name = "Tomato");
