@@ -2,8 +2,8 @@
 -- create database
 -- 
 
-create database if not exists cs336;
-use cs336;
+create database if not exists cs336deliverable3;
+use cs336deliverable3;
 
 --
 -- customers and employees
