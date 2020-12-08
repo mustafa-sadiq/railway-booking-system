@@ -44,8 +44,8 @@ password: cs336database
 
 #### VI. Customer representative: (30 points)
 - [ ] edit and delete information for train schedules (6 points)
-- [ ] customers browse questions and answers (4 points)
-- [ ] customers search questions by keywords (4 points)
+- [X] customers browse questions and answers (4 points)
+- [X] customers search questions by keywords (4 points)
 - [X] customers send a question to the customer service (3 points)
 - [ ] reps reply to customer questions (3 points)
 - [ ] produce a list of train schedules for a given station (as origin/destination) (5 points)
