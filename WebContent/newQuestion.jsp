@@ -25,9 +25,6 @@
 
 		//Get parameters from the HTML form at the index.jsp
 		String newQuestion = request.getParameter("question");
-
-		System.out.println(user);
-		System.out.println(newQuestion);
 		//Make an insert statement for the Sells table:
 		String insert = "INSERT INTO FORUM(username, question)"
 				+ "VALUES (?, ?)";
