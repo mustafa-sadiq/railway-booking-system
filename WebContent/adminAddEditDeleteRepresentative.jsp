@@ -79,7 +79,7 @@ table, th, td {
 			<td>
 				<form action="editRepresentative.jsp" method="post">
 					<input type="submit" name="edit_user" value="Edit" /> <input
-						type="hidden" name="edit" value="<%=result.getString(1)%>" />
+						type="hidden" name="user" value="<%=result.getString(4)%>" />
 				</form>
 			</td>
 

@@ -26,15 +26,24 @@ table, th, td {
 	<a href="index.jsp">Please Login</a>
 	<%
 		} else {
-			%>
-			<a href="customerPage.jsp">Back</a>
-			<%
-	out.println("Welcome to Customer Service " + user);
+	%>
+	<a href="customerPage.jsp">Back</a>
+	<%
+		out.println("Welcome to Customer Service " + user);
 	%>
 	<a href='logout.jsp'>Log out</a>
 	<br />
-
+	<br />
 	<a href='customerAskNewQuestion.jsp'>Ask a new question</a>
+	<br />
+	<br />
+
+	<form method="get" action="filterQuestions.jsp">
+		Keyword: <input type="text" name="keyword"> <input
+			type="submit" value="Filter">
+	</form>
+	<br />
+
 	<%
 		try {
 
@@ -45,15 +54,25 @@ table, th, td {
 		Statement stmt = con.createStatement();
 		//Get the selected radio button from the index.jsp
 		String entity = request.getParameter("command");
+		String keyword = request.getParameter("keyword");
+		String str;
 		//Make a SELECT query from the table specified by the 'command' parameter at the index.jsp
-		String str = "SELECT * FROM FORUM WHERE username='" + user + "'";
+		if (keyword == null) {
+			str = "SELECT * FROM FORUM";
+		} else {
+			str = "SELECT * FROM FORUM WHERE question LIKE '" + "%" + keyword + "%' or answer LIKE '" + "%" + keyword + "%'";
+		}
+
 		//Run the query against the database.
 		ResultSet result = stmt.executeQuery(str);
 	%>
 	<table>
 		<tr>
 			<td>Question</td>
+			<td>Asked by</td>
 			<td>Answer</td>
+			<td>Answered by</td>
+
 		</tr>
 		<%
 			//parse out the results
@@ -61,7 +80,9 @@ table, th, td {
 		%>
 		<tr>
 			<td><%=result.getString("question")%></td>
+			<td><%=result.getString("username")%></td>
 			<td><%=result.getString("answer")%></td>
+			<td><%=result.getString("employee_username")%></td>
 		</tr>
 
 
