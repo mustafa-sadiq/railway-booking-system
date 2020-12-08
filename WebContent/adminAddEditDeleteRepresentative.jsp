@@ -33,8 +33,11 @@ table, th, td {
 	%>
 	<a href='logout.jsp'>Log out</a>
 	<br />
+	<br/>
 
 	<a href='addNewRepresentative.jsp'>Add a new representative</a>
+	<br/>
+	<br/>
 	<%
 		try {
 
