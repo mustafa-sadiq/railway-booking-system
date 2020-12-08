@@ -38,7 +38,7 @@ create table FORUM (
 
 drop table if exists SCHEDULES;
 create table SCHEDULES(schedule_id int(10), train_id int(4), transit_name varchar(20),
-fare float,
+fare float, 
 primary key (schedule_id));
 
 drop table if exists STATIONS;
