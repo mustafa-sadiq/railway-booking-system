@@ -17,7 +17,7 @@
 
 	if (userid == "" || pwd == "") {
 		out.println("Username or password cannot be empty <a href='index.jsp'>try again</a>");
-	} else if (userid.equals("admin") || pwd.equals("admin")) {
+	} else if (userid.equals("admin") && pwd.equals("admin")) {
 		session.setAttribute("user", userid);
 		response.sendRedirect("adminPage.jsp");
 	} else {

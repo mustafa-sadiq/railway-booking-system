@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add/Edit/Delete Customer Representative</title>
+<title>adminAddEditDeleteRepresentative.jsp</title>
 <style type="text/css">
 table, th, td {
 	border: 1px solid black;
