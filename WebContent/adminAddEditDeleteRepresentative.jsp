@@ -73,7 +73,7 @@ table, th, td {
 			<td>
 				<form action="deleteRepresentative.jsp" method="post">
 					<input type="submit" name="delete_user" value="Delete" /> <input
-						type="hidden" name="user" value="<%=result.getString(1)%>" />
+						type="hidden" name="user" value="<%=result.getString(4)%>" />
 				</form>
 			</td>
 			<td>
