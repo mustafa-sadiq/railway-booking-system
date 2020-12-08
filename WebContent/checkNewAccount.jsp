@@ -29,7 +29,7 @@
 			//Get the selected radio button from the index.jsp
 
 			//Make a SELECT query from the table specified by the 'command' parameter at the index.jsp
-			String str = "INSERT INTO User(username, password)" + "VALUES (?, ?)";
+			String str = "INSERT INTO CUSTOMERS(cust_username, cust_password)" + "VALUES (?, ?)";
 			PreparedStatement ps = con.prepareStatement(str);
 			//Run the query against the database.
 
