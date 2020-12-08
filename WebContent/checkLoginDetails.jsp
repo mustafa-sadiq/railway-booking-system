@@ -29,14 +29,14 @@
 
 		Statement st = con.createStatement();
 		ResultSet rs;
-		rs = st.executeQuery("select * from customers where cust_username='" + userid + "' and cust_password='" + pwd + "'");
+		rs = st.executeQuery("select * from CUSTOMERS where cust_username='" + userid + "' and cust_password='" + pwd + "'");
 		if (rs.next()) {
 			session.setAttribute("user", userid); // the username will be stored in the session
 			out.println("welcome " + userid);
 			out.println("<a href='logout.jsp'>Log out</a>");
 			response.sendRedirect("customerPage.jsp");
 		} else {
-			rs = st.executeQuery("select * from employees where employee_username='" + userid + "' and employee_password='" + pwd + "'");
+			rs = st.executeQuery("select * from EMPLOYEES where employee_username='" + userid + "' and employee_password='" + pwd + "'");
 			if (rs.next()) {
 				session.setAttribute("user", userid); // the username will be stored in the session
 				out.println("welcome " + userid);

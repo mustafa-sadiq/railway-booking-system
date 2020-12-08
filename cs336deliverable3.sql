@@ -1,7 +1,7 @@
 --
 -- create database
 -- 
-
+drop database cs336deliverable3;
 create database if not exists cs336deliverable3;
 use cs336deliverable3;
 
@@ -23,10 +23,10 @@ drop table if exists FORUM;
 create table FORUM (
 	message_id int(10) not null auto_increment,
     username varchar (20) default null,
-    question_subject varchar (100) default null,
-    question text,
+     question_subject varchar (100) default null,
+    question varchar(1000),
     employee_username varchar (20) default null,
-    answer text,
+    answer varchar(1000) default 'not answered yet',
     primary key (message_id),
     foreign key (username) references CUSTOMERS(cust_username),
     foreign key (employee_username) references EMPLOYEES(employee_username)

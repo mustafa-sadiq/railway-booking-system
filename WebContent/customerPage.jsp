@@ -36,14 +36,9 @@
 	<br />
 	<a href='logout.jsp'>view current and past reservations with their details</a>
 
+	
 	<br />
-	<a href='logout.jsp'>customers browse questions and answers</a>
-
-	<br />
-	<a href='logout.jsp'>customers search questions by keywords</a>
-
-	<br />
-	<a href='logout.jsp'>customers send a question to the customer service</a>
+	<a href='customerQuestionsPage.jsp'>customers send a question to the customer service</a>
 
 
 
