@@ -38,7 +38,7 @@
 
 	
 	<br />
-	<a href='customerQuestionsPage.jsp'>customers send a question to the customer service</a>
+	<a href='customerQuestionsPage.jsp'>Send a question to the customer service</a>
 
 
 

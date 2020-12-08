@@ -27,22 +27,22 @@
 	
 	
 	<br/>
-	<a href='logout.jsp'>Add, edit and delete information for a customer representative</a>
+	<a href='adminAddEditDeleteRepresentative.jsp'>Add, edit and delete information for a customer representative</a>
 	
 	<br/>
 	<a href='logout.jsp'>Obtain sales reports per month</a>
 	
 	<br/>
-	<a href='logout.jsp'>Produce a list of reservations:</a>
+	<a href='logout.jsp'>Produce a list of reservations</a>
 	
 	<br/>
-	<a href='logout.jsp'>Produce a listing of revenue per:</a>
+	<a href='logout.jsp'>Produce a listing of revenue</a>
 	
 	<br/>
-	<a href='logout.jsp'>Best customer</a>
+	<a href='logout.jsp'>Find best customer</a>
 	
 	<br/>
-	<a href='logout.jsp'>Best 5 most active transit lines</a>
+	<a href='logout.jsp'>Find best 5 most active transit lines</a>
 	
 	
 	

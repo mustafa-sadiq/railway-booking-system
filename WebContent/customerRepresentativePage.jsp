@@ -30,7 +30,7 @@
 
 
 	<br />
-	<a href='logout.jsp'>reps reply to customer questions</a>
+	<a href='logout.jsp'>Reply to customer questions</a>
 
 	<br />
 	<a href='logout.jsp'>edit and delete information for train

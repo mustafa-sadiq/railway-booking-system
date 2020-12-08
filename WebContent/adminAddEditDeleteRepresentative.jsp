@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Customer service</title>
+<title>Add/Edit/Delete Customer Representative</title>
 <style type="text/css">
 table, th, td {
 	border: 1px solid black;
@@ -26,15 +26,15 @@ table, th, td {
 	<a href="index.jsp">Please Login</a>
 	<%
 		} else {
-			%>
-			<a href="customerPage.jsp">Back</a>
-			<%
-	out.println("Welcome to Customer Service " + user);
+	%>
+	<a href="adminPage.jsp">Back</a>
+	<%
+		out.println("Add/Edit/Delete Customer Representative " + user);
 	%>
 	<a href='logout.jsp'>Log out</a>
 	<br />
 
-	<a href='customerAskNewQuestion.jsp'>Ask a new question</a>
+	<a href='addNewRepresentative.jsp'>Add a new representative</a>
 	<%
 		try {
 
@@ -46,22 +46,43 @@ table, th, td {
 		//Get the selected radio button from the index.jsp
 		String entity = request.getParameter("command");
 		//Make a SELECT query from the table specified by the 'command' parameter at the index.jsp
-		String str = "SELECT * FROM FORUM WHERE username='" + user + "'";
+		String str = "SELECT * FROM EMPLOYEES";
 		//Run the query against the database.
 		ResultSet result = stmt.executeQuery(str);
 	%>
 	<table>
 		<tr>
-			<td>Question</td>
-			<td>Answer</td>
+			<td>employee_ssn</td>
+			<td>employee_first</td>
+			<td>employee_last</td>
+			<td>employee_username</td>
+			<td>employee_password</td>
+			<td>isManager</td>
 		</tr>
 		<%
 			//parse out the results
 		while (result.next()) {
 		%>
 		<tr>
-			<td><%=result.getString("question")%></td>
-			<td><%=result.getString("answer")%></td>
+			<td><%=result.getString("employee_ssn")%></td>
+			<td><%=result.getString("employee_first")%></td>
+			<td><%=result.getString("employee_last")%></td>
+			<td><%=result.getString("employee_username")%></td>
+			<td><%=result.getString("employee_password")%></td>
+			<td><%=result.getString("isManager")%></td>
+			<td>
+				<form action="deleteRepresentative.jsp" method="post">
+					<input type="submit" name="delete_user" value="Delete" /> <input
+						type="hidden" name="user" value="<%=result.getString(1)%>" />
+				</form>
+			</td>
+			<td>
+				<form action="editRepresentative.jsp" method="post">
+					<input type="submit" name="edit_user" value="Edit" /> <input
+						type="hidden" name="edit" value="<%=result.getString(1)%>" />
+				</form>
+			</td>
+
 		</tr>
 
 
@@ -80,10 +101,6 @@ table, th, td {
 
 	}
 	%>
-
-
-
-
 
 </body>
 </html>
