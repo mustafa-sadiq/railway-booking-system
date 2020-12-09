@@ -12,9 +12,11 @@
 <body>
 
 	<%
-		String userid = request.getParameter("username");
+	String userid = request.getParameter("username");
 	String pwd = request.getParameter("password");
-
+	String fname = request.getParameter("cust_first");
+	String lname = request.getParameter("cust_last");
+	String email = request.getParameter("email");
 	if (userid == "" || pwd == "") {
 		out.println("Username or password cannot be empty <a href='newAccount.jsp'>try again</a>");
 	} else {
@@ -29,15 +31,18 @@
 			//Get the selected radio button from the index.jsp
 
 			//Make a SELECT query from the table specified by the 'command' parameter at the index.jsp
-			String str = "INSERT INTO CUSTOMERS(cust_username, cust_password)" + "VALUES (?, ?)";
+			String str = "INSERT INTO CUSTOMERS(cust_first,cust_last,cust_email,cust_username,cust_password)" + "VALUES (?, ?,?,?,?)";
 			PreparedStatement ps = con.prepareStatement(str);
 			//Run the query against the database.
 
-			ps.setString(1, userid);
-			ps.setString(2, pwd);
+			ps.setString(1, fname);
+			ps.setString(2, lname);
+			ps.setString(3, email);
+			ps.setString(4,userid);
+			ps.setString(5,pwd);
 			ps.executeUpdate();
 
-			out.println("Account created succesfully. You may now ");
+			out.println("Account created succesfully. You may now login ");
 	%>
 	<a href="index.jsp">login</a>
 
