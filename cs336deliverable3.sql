@@ -1,7 +1,7 @@
 --
 -- create database
 -- 
-drop database cs336deliverable3;
+drop database if exists cs336deliverable3;
 create database if not exists cs336deliverable3;
 use cs336deliverable3;
 
@@ -61,11 +61,12 @@ foreign key (stop_station) references STATIONS(station_id));
 drop table if exists RESERVATION;
 create table RESERVATION (reservation_num int, reservation_fare float, reservation_date date,
 cust_username varchar(30), origin int(10), destination int(10), scheduled int(10),
-trip_type boolean,
+trip_type boolean,employee varchar (20) default null,
 primary key (reservation_num),
 foreign key(cust_username) references CUSTOMERS(cust_username),
 foreign key (scheduled) references SCHEDULES(schedule_id),
 foreign key (origin) references STATIONS(station_id),
+foreign key(employee) references EMPLOYEES(employee_username),
 foreign key (destination) references STATIONS(station_id));
 
 --
@@ -93,4 +94,6 @@ Insert into STATIONS values (100, "Tomato", "NJ", "Union"),
 Insert into STOPS values (1, 100, 101, 1, "9:00:00", "10:00:00"),
 						(1, 101, 102, 2, "10:15:00", "11:15:00"),
                         (2, 100, 101, 1, "11:00:00", "12:00:00");
- 
+Insert into RESERVATION values(1,5.1,'2020-12-9','parth123',100,101,1,true,'employee1'),
+							(2,5.2,'2020-12-8','mustu123',101,100,1,true,'employee1'),
+                            (3,5.3,'2020-12-7','parth123',100,102,1,true,'employee1');
