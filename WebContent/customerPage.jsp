@@ -30,7 +30,7 @@
 
 
 	<br />
-	<a href='logout.jsp'>search for train schedules by origin,
+	<a href='customerScheduleReservation.jsp'>search for train schedules by origin,
 		destination, date of travel</a>
 
 	<br />
