@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<%
+<% //THIS IS A CHANGE
 		String user = (String) session.getAttribute("user");
 
 	if (user == null) {
