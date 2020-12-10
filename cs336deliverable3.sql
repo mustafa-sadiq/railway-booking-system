@@ -55,7 +55,7 @@ foreign key (start_station) references STATIONS(station_id),
 foreign key (stop_station) references STATIONS(station_id));
 
 --
--- customer reservation
+-- customer reservation. trip_type true for round trips and false for one-way
 --
 
 drop table if exists RESERVATION;
