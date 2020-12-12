@@ -48,7 +48,7 @@
 	<a href='adminBestCustomer.jsp'>Find best customer</a>
 	
 	<br/>
-	<a href='logout.jsp'>Find best 5 most active transit lines</a>
+	<a href='adminMostActiveTransit.jsp'>Find best 5 most active transit lines</a>
 	
 	
 	
