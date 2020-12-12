@@ -36,6 +36,9 @@
 	<a href='adminReservationsByTransit.jsp'>Produce a list of reservations by transit line</a>
 	
 	<br/>
+	<a href='adminReservationsByCustomer.jsp'>Produce a list of reservations by customer</a>
+	
+	<br/>
 	<a href='logout.jsp'>Produce a listing of revenue</a>
 	
 	<br/>
