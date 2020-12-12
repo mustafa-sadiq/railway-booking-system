@@ -44,9 +44,16 @@ table, th, td {
 		<select name="item">
 			<%
 				while (result.next()) {
-			%>
-			<option><%=result.getString("transit_name")%></option>
-			<%
+					if (result.getString("transit_name").equals(request.getParameter("item"))){
+						%>
+						<option selected><%=result.getString("transit_name")%></option>
+						<%
+					} else {
+						%>
+						<option><%=result.getString("transit_name")%></option>
+						<%
+					}
+			
 				}
 			%>
 		</select> <input type="submit" value="Get reservations">
