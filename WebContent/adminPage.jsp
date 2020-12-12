@@ -39,7 +39,7 @@
 	<a href='adminReservationsByCustomer.jsp'>Produce a list of reservations by customer</a>
 	
 	<br/>
-	<a href='logout.jsp'>Produce a listing of revenue</a>
+	<a href='adminProduceRevenueTransit.jsp'>Produce a listing of revenue per transit</a>
 	
 	<br/>
 	<a href='logout.jsp'>Find best customer</a>
