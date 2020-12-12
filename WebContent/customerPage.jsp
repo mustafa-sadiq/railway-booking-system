@@ -34,7 +34,7 @@
 		destination, date of travel</a>
 
 	<br />
-	<a href='logout.jsp'>view current and past reservations with their details</a>
+	<a href='showReservation.jsp'>view current and past reservations with their details</a>
 
 	
 	<br />

@@ -105,10 +105,10 @@ pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 			
 			out.print("<td>");
 			out.print("<select name = \"discount\" size = 1>" +
-					"<option value=100>None</option>" +
+					"<option value=0>None</option>" +
 					"<option value=25>Children</option>" +
 					"<option value=35>Senior</option>" +
- 					"<option value=5>Disabled</option>" +
+ 					"<option value=50>Disabled</option>" +
 				"</select>");
 			out.print("<td>");
 			
