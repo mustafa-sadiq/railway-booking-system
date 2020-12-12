@@ -29,36 +29,37 @@
 
 		//Run the query against the database.
 		ResultSet result = stmt.executeQuery(str);
+		
+		String value = "YYYY-MM";
+		
+		if (request.getParameter("item") != null) value = request.getParameter("item");
+		
+		
 	%>
 
 
 
 	<form method="get" action="adminSalesReport.jsp">
-		<select name="item">
-			<%
-				while (result.next()) {
-			%>
-			<option><%=result.getString(1) + "/" + result.getString(2)%></option>
-			<%
-				}
-			%>
-		</select> <input type="submit" value="Get sales report">
+	<input type = "month" value=<%=value%> name="item">
+		 <input type="submit" value="Get sales report">
 	</form>
 
 
 
 	<%
 		if (request.getParameter("item") != null) {
-		String[] values = request.getParameter("item").split("\\/");
+		String[] values = request.getParameter("item").split("\\-");
 	%>
 	<br />
 	<%
 		out.println("Total revenue for month " + values[0] + "/" + values[1] + ": ");
-	String statement = "SELECT sum(reservation_fare) FROM RESERVATION WHERE month(reservation_date)='" + values[0]
-			+ "' and year(reservation_date)='" + values[1] + "'";
+	String statement = "SELECT sum(reservation_fare) FROM RESERVATION WHERE month(reservation_date)='" + values[1]
+			+ "' and year(reservation_date)='" + values[0] + "'";
 	result = stmt.executeQuery(statement);
 	result.next();
-	out.print(result.getString(1));
+	String answer = result.getString(1);
+	if (answer != null ) out.print(answer);
+	else out.print("0.00");
 
 	}
 
