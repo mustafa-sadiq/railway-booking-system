@@ -42,6 +42,9 @@
 	<a href='adminProduceRevenueTransit.jsp'>Produce a listing of revenue per transit</a>
 	
 	<br/>
+	<a href='adminProduceRevenueCustomer.jsp'>Produce a listing of revenue per customer</a>
+	
+	<br/>
 	<a href='logout.jsp'>Find best customer</a>
 	
 	<br/>
