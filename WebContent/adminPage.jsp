@@ -30,7 +30,7 @@
 	<a href='adminAddEditDeleteRepresentative.jsp'>Add, edit and delete information for a customer representative</a>
 	
 	<br/>
-	<a href='logout.jsp'>Obtain sales reports per month</a>
+	<a href='adminSalesReport.jsp'>Obtain sales reports per month</a>
 	
 	<br/>
 	<a href='logout.jsp'>Produce a list of reservations</a>
