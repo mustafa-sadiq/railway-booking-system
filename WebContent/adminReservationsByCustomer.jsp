@@ -18,7 +18,7 @@ table, th, td {
 
 
 	<a href="adminPage.jsp">Back</a> Produce a list of reservations by
-	transit line
+	customer
 	<a href='logout.jsp'>Log out</a>
 	<br />
 	<br />
@@ -44,17 +44,17 @@ table, th, td {
 		<select name="item">
 			<%
 				while (result.next()) {
-					if (result.getString("cust_username").equals(request.getParameter("item"))){
-						%>
-						<option selected><%=result.getString("cust_username")%></option>
-						<%
-					} else{
-						%>
-						<option><%=result.getString("cust_username")%></option>
-						<%
-					}
-			
+				if (result.getString("cust_username").equals(request.getParameter("item"))) {
+			%>
+			<option selected><%=result.getString("cust_username")%></option>
+			<%
+				} else {
+			%>
+			<option><%=result.getString("cust_username")%></option>
+			<%
 				}
+
+			}
 			%>
 		</select> <input type="submit" value="Get reservations">
 	</form>
