@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<a href="customerPage.jsp">Back</a> Find sales report by month
+	<a href="adminPage.jsp">Back</a> Find sales report by month
 	<a href='logout.jsp'>Log out</a>
 	<br />
 	<br />
