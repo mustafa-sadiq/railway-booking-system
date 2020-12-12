@@ -65,9 +65,9 @@ table, th, td {
 		//Run the query against the database.
 		ResultSet result = stmt.executeQuery(str);
 	%>
-	<form contenteditable='true'>
-		<table id="questionsTable">
+		<table>
 			<tr>
+			<td>question id</td>
 				<td>Question</td>
 				<td>Asked by</td>
 				<td>Answer</td>
@@ -79,10 +79,17 @@ table, th, td {
 			while (result.next()) {
 			%>
 			<tr>
+				<td><%=result.getString("message_id")%></td>
 				<td><%=result.getString("question")%></td>
 				<td><%=result.getString("username")%></td>
 				<td><%=result.getString("answer")%></td>
 				<td><%=result.getString("employee_username")%></td>
+				<td>
+					<form action="answerQuestion.jsp" method="post">
+					<input type="submit" name="answer_question" value="answer" /> <input
+						type="hidden" name="user" value="<%=result.getString(1)%>" />
+				</form>
+			</td>
 			</tr>
 	
 	
@@ -92,8 +99,6 @@ table, th, td {
 			db.closeConnection(con);
 			%>
 		</table>
-		  <input type="submit" id="save" value="Save" />
-	</form>
 	<%
 
 		} catch (Exception e) {
