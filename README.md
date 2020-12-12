@@ -33,14 +33,14 @@ password: cs336group30
 - [X] logout (for all customers, admin, customer reps)
 
 #### II. Browsing and search functionality (15 points)
-- [ ] search for train schedules by origin, destination, date of travel (5 points)
-- [ ] browse the resulting schedules (5 points)
-  - [ ] see all the stops a train will make, fare etc.
+- [X] search for train schedules by origin, destination, date of travel (5 points)
+- [X] browse the resulting schedules (5 points)
+  - [X] see all the stops a train will make, fare etc.
 - [ ] sort by different criteria (by arrival time, departure time, fare) (5 points)
 
 #### III. Reservations (15 points)
-- [ ] a customer should be able to make a reservation for a specific route (round-trip/oneway) (5 points)
-- [ ] get a discount in case of child/senior/disabled (2 points)
+- [X] a customer should be able to make a reservation for a specific route (round-trip/oneway) (5 points)
+- [X] get a discount in case of child/senior/disabled (2 points)
 - [ ] cancel existing reservation (3 points)
 - [ ] view current and past reservations with their details (separately). (5 points)
 
