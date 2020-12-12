@@ -38,7 +38,7 @@ create table FORUM (
 
 drop table if exists SCHEDULES;
 create table SCHEDULES(schedule_id int(10), train_id int(4), transit_name varchar(20),
-fare float, 
+fare float(5,2), 
 primary key (schedule_id));
 
 drop table if exists STATIONS;
@@ -59,7 +59,7 @@ foreign key (stop_station) references STATIONS(station_id));
 --
 
 drop table if exists RESERVATION;
-create table RESERVATION (reservation_num int not null auto_increment, reservation_fare float, reservation_date date,
+create table RESERVATION (reservation_num int not null auto_increment, reservation_fare float(5,2), reservation_date date,
 cust_username varchar(30), origin int(10), destination int(10), scheduled int(10),
 trip_type boolean,employee varchar (20) default null,
 primary key (reservation_num),

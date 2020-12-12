@@ -30,19 +30,25 @@
 	<a href='adminAddEditDeleteRepresentative.jsp'>Add, edit and delete information for a customer representative</a>
 	
 	<br/>
-	<a href='logout.jsp'>Obtain sales reports per month</a>
+	<a href='adminSalesReport.jsp'>Obtain sales reports per month</a>
 	
 	<br/>
-	<a href='logout.jsp'>Produce a list of reservations</a>
+	<a href='adminReservationsByTransit.jsp'>Produce a list of reservations by transit line</a>
 	
 	<br/>
-	<a href='logout.jsp'>Produce a listing of revenue</a>
+	<a href='adminReservationsByCustomer.jsp'>Produce a list of reservations by customer</a>
 	
 	<br/>
-	<a href='logout.jsp'>Find best customer</a>
+	<a href='adminProduceRevenueTransit.jsp'>Produce a listing of revenue per transit</a>
 	
 	<br/>
-	<a href='logout.jsp'>Find best 5 most active transit lines</a>
+	<a href='adminProduceRevenueCustomer.jsp'>Produce a listing of revenue per customer</a>
+	
+	<br/>
+	<a href='adminBestCustomer.jsp'>Find best customer</a>
+	
+	<br/>
+	<a href='adminMostActiveTransit.jsp'>Find best 5 most active transit lines</a>
 	
 	
 	

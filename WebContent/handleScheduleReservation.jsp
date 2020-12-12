@@ -74,7 +74,10 @@ pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 			
 			out.print("<td>");
 			String sid = result.getString("sid"); 
-			out.print(sid); 
+			out.print("<form method = \"get\" action = \"showAllStops.jsp\" >");
+			out.print("<input type = \"hidden\" value = \"" +sid+ "\" name =\"schedule_id\">");
+			out.print("<input type = \"submit\" value = "+sid+">"); 
+			out.print("</form>");
 			out.print("</td>");
 			
 			out.print("<td>");
