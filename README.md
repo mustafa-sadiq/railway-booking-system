@@ -42,7 +42,7 @@ password: cs336group30
 - [X] a customer should be able to make a reservation for a specific route (round-trip/oneway) (5 points)
 - [X] get a discount in case of child/senior/disabled (2 points)
 - [ ] cancel existing reservation (3 points)
-- [ ] view current and past reservations with their details (separately). (5 points)
+- [X] view current and past reservations with their details (separately). (5 points)
 
 #### IV. Admin functions (30 points)
 - [X] Admin (create an admin account ahead of time)
