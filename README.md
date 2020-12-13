@@ -58,7 +58,7 @@ password: cs336group30
   - [X] best 5 most active transit lines (4 points)
 
 #### VI. Customer representative: (30 points)
-- [ ] edit and delete information for train schedules (6 points)
+- [X] edit and delete information for train schedules (6 points)
 - [X] customers browse questions and answers (4 points)
 - [X] customers search questions by keywords (4 points)
 - [X] customers send a question to the customer service (3 points)
