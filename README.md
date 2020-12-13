@@ -36,7 +36,7 @@ password: cs336group30
 - [X] search for train schedules by origin, destination, date of travel (5 points)
 - [X] browse the resulting schedules (5 points)
   - [X] see all the stops a train will make, fare etc.
-- [ ] sort by different criteria (by arrival time, departure time, fare) (5 points)
+- [X] sort by different criteria (by arrival time, departure time, fare) (5 points)
 
 #### III. Reservations (15 points)
 - [X] a customer should be able to make a reservation for a specific route (round-trip/oneway) (5 points)
