@@ -44,7 +44,7 @@
 	<a href='representativeReservationList.jsp'>produce a list of all customers who have
 		reservations on a given transit line</a>
 	<br />
-	<a href='representativeReservationList_2.jsp'>produce a list of all customers who have
+	<a href='customersOnDateAndTransit.jsp?transit_id=999&today_date=2000-01-01'>produce a list of all customers who have
 		reservations on a given date</a>
 
 
