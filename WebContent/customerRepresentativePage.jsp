@@ -42,7 +42,10 @@
 
 	<br />
 	<a href='representativeReservationList.jsp'>produce a list of all customers who have
-		reservations on a given transit line and date</a>
+		reservations on a given transit line</a>
+	<br />
+	<a href='representativeReservationList_2.jsp'>produce a list of all customers who have
+		reservations on a given date</a>
 
 
 
