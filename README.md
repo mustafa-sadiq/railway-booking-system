@@ -63,6 +63,6 @@ password: cs336group30
 - [X] customers search questions by keywords (4 points)
 - [X] customers send a question to the customer service (3 points)
 - [X] reps reply to customer questions (3 points)
-- [ ] produce a list of train schedules for a given station (as origin/destination) (5 points)
+- [X] produce a list of train schedules for a given station (as origin/destination) (5 points)
 - [ ] produce a list of all customers who have reservations on a given transit line and date. (5 points)
 
