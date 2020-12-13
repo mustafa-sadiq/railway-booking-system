@@ -18,7 +18,7 @@ table, th, td {
 
 
 	<a href="customerRepresentativePage.jsp">Back</a> Produce a list of customers by
-	transit line and date
+	transit line.
 	<a href='logout.jsp'>Log out</a>
 	<br />
 	<br />
@@ -36,6 +36,8 @@ table, th, td {
 
 		//Run the query against the database.
 		ResultSet result = stmt.executeQuery(str);
+
+		
 	%>
 
 
@@ -65,8 +67,8 @@ table, th, td {
 	%>
 	<br />
 	<%
-	String statement = "SELECT DISTINCT cust_username FROM RESERVATION WHERE scheduled=(SELECT schedule_id FROM SCHEDULES WHERE transit_name='"
-			+ request.getParameter("item") + "')";
+	String statement = "SELECT DISTINCT cust_username FROM RESERVATION,SCHEDULES WHERE scheduled=schedule_id and transit_name='"+
+			request.getParameter("item") + "'";
 	result = stmt.executeQuery(statement);
 	%>
 	<table>
