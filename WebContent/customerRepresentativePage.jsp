@@ -30,14 +30,14 @@
 
 
 	<br />
+	<a href='logout.jsp'>edit and delete information for train
+		schedules</a>
+		
+	<br />
 	<a href='representativeQuestionsPage.jsp'>Reply to customer questions</a>
 
 	<br />
-	<a href='logout.jsp'>edit and delete information for train
-		schedules</a>
-
-	<br />
-	<a href='logout.jsp'>produce a list of train schedules for a given
+	<a href='representativeSchedulesGivenStation.jsp'>produce a list of train schedules for a given
 		station (as origin/destination)</a>
 
 	<br />
