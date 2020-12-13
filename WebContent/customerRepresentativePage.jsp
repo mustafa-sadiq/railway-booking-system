@@ -41,7 +41,7 @@
 		station (as origin/destination)</a>
 
 	<br />
-	<a href='logout.jsp'>produce a list of all customers who have
+	<a href='representativeReservationList.jsp'>produce a list of all customers who have
 		reservations on a given transit line and date</a>
 
 
