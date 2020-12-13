@@ -30,6 +30,9 @@
 
 
 	<br />
+	<a href='browseSchedule.jsp?transit_name=none&sort_by=stop_arrival'>browse schedules and filter</a>
+
+	<br />
 	<a href='customerScheduleReservation.jsp'>search for train schedules by origin,
 		destination, date of travel</a>
 

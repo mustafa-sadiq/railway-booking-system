@@ -28,7 +28,7 @@ String reservation_query =("select rs.reservation_num as c1, rs.reservation_date
 +" join STATIONS as s1"
 +" on s1.station_id = rs.origin"
 +" join STATIONS as s2"
-+" on s2.station_id = rs.origin"
++" on s2.station_id = rs.destination"
 +" where rs.cust_username =\""+username+ "\";");
 ResultSet result = stmt.executeQuery(reservation_query);
 
@@ -101,7 +101,7 @@ while(result.next()){
 	out.print("<td>");
 	String trip = result.getString("c6");
 	String c6 ="";
-	if (trip.equals("1"))
+	if (trip.equals("0"))
 		c6 = "round-trip";
 	else
 		c6 = "one-way";
