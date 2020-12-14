@@ -10,7 +10,7 @@ pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <title>Schedules</title>
 </head>
 <body>
-<a href="customerPage.jsp">Back</a>
+<a href="customerScheduleReservation.jsp">Back</a>
 <%
 	List<String> list = new ArrayList<String>();
 	String origin_id = request.getParameter("origin");
