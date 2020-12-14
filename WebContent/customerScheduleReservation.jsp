@@ -9,6 +9,7 @@
 <title>Schedule</title>
 </head>
 <body>
+<a href="customerPage.jsp">Back</a>
 <%
 ApplicationDB db = new ApplicationDB();
 Connection con = db.getConnection();
