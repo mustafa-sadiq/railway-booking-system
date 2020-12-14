@@ -31,6 +31,14 @@
 			//Get the selected radio button from the index.jsp
 
 			//Make a SELECT query from the table specified by the 'command' parameter at the index.jsp
+			String employee = "SELECT * FROM EMPLOYEES WHERE employee_username='" + userid + "'";
+			ResultSet result = stmt.executeQuery(employee);
+			result.next();
+			
+			if (result.next() == false){
+				throw new SQLException();
+			}		
+			
 			String str = "INSERT INTO CUSTOMERS(cust_first,cust_last,cust_email,cust_username,cust_password)" + "VALUES (?, ?,?,?,?)";
 			PreparedStatement ps = con.prepareStatement(str);
 			//Run the query against the database.
@@ -51,14 +59,11 @@
 	db.closeConnection(con);
 
 	} catch (SQLException e) {
-	if (e.getErrorCode() == 1062) {
 		out.print("Username already taken");
 	%>
 	<a href="index.jsp">try again</a>
 
 	<%
-		}
-
 	} catch (Exception e) {
 	out.print(e);
 	}
