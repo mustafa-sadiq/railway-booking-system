@@ -72,15 +72,15 @@
 		<table>
 			<tr>
 				<td>question number</td>
-				<td><input type="text" name="message_id" value = "<%= session.getAttribute("message_id") %>"></td>
+				<td><input type="text" name="message_id" value = "<%= session.getAttribute("message_id") %>"readonly="readonly"></td>
 			</tr>
 			<tr>
 				<td>question</td>
-				<td><input type="text" name="question" value = "<%= session.getAttribute("question") %>"></td>
+				<td><input type="text" name="question" value = "<%= session.getAttribute("question") %>"readonly="readonly"></td>
 			</tr>
 			<tr>
 				<td>user name</td>
-				<td><input type="text" name="username" value = "<%= session.getAttribute("username") %>"></td>
+				<td><input type="text" name="username" value = "<%= session.getAttribute("username") %>"readonly="readonly"></td>
 			</tr>
 			<tr>
 				<td>answer</td>
