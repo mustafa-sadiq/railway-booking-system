@@ -26,7 +26,7 @@ create table FORUM (
      question_subject varchar (100) default null,
     question varchar(1000),
     employee_username varchar (20) default null,
-    answer varchar(1000) default 'not answered yet',
+    answer varchar(1000) default ' ',
     primary key (message_id),
     foreign key (username) references CUSTOMERS(cust_username),
     foreign key (employee_username) references EMPLOYEES(employee_username)
