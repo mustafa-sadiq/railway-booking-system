@@ -26,7 +26,7 @@ out.print("</select>");
 %>
 <td> Sort by: </td><select name="sort_by" size=1>
 			<option value="stop_arrival">Arrival</option>
-			<option value="stop_destination">Departure</option>
+			<option value="stop_departure">Departure</option>
 		</select>&nbsp;<br> <input type="submit" value="filter">
 </form>
 <%
