@@ -19,14 +19,20 @@ String today = dtf.format(now);
 	<form method = "get" action ="handleScheduleReservation.jsp">
 		<td>Date: </td><td><input type = "date" value="YYYY-MM-DD" name="today_date" min=today></td>
 		<td> Origin: </td><select name="origin" size=1>
-			<option value="100">Tomato</option>
-			<option value="101">Onion</option>
-			<option value="102">Potato</option>
+			<option value="100">Union Stationo</option>
+			<option value="101">Elizabeth Station</option>
+			<option value="102">Roselle Station</option>
+			<option value="103">Edison</option>
+			<option value="104">New Bruns Station</option>
+			<option value="105">Piscataway station</option>
 		</select>
 		<td> Destination: </td><select name="destination" size=1>
-			<option value="100">Tomato</option>
-			<option value="101">Onion</option>
-			<option value="102">Potato</option>
+			<option value="100">Union Stationo</option>
+			<option value="101">Elizabeth Station</option>
+			<option value="102">Roselle Station</option>
+			<option value="103">Edison</option>
+			<option value="104">New Bruns Station</option>
+			<option value="105">Piscataway station</option>
 		</select>&nbsp;<br> <input type="submit" value="submit">
 	</form>
 </br>
