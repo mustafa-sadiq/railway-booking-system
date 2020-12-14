@@ -8,6 +8,9 @@ pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <head>
 <meta charset="ISO-8859-1">
 <title>All stops</title>
+</head>
+<body>	
+<a href="customerScheduleReservation.jsp">Back</a>
 <%
 ApplicationDB db = new ApplicationDB();	
 Connection con = db.getConnection();
@@ -94,8 +97,5 @@ while(result.next()){
 out.print("</table>");
 con.close();
 %>
-</head>
-<body>
-
 </body>
 </html>
