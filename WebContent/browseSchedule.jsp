@@ -9,6 +9,7 @@ pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <title>Browse schedules</title>
 </head>
 <body>
+<a href="customerPage.jsp">Back</a>
 <%
 ApplicationDB db = new ApplicationDB();
 Connection con = db.getConnection();
