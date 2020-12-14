@@ -65,9 +65,13 @@ table, th, td {
 	%>
 	<br />
 	<%
-		String statement = "SELECT * FROM STOPS WHERE start_station=(select station_id from STATIONS where station_name='"
-			+ request.getParameter("item") + "') or stop_station=(select station_id from STATIONS where station_name='"
-			+ request.getParameter("item") + "')";
+		String statement = "select rs.scheduled as c1, s1.station_name as c2, s2.station_name as c3, rs.stop_num as c4, rs.stop_departure as c5, rs.stop_arrival as c6"
+				+" from STOPS as rs"
+				+" join STATIONS as s1"
+				+" on s1.station_id = rs.start_station"
+				+" join STATIONS as s2"
+				+" on s2.station_id = rs.stop_station"
+				+" where s1.station_name='" + request.getParameter("item") + "' or s2.station_name='" + request.getParameter("item") + "'";
 	result = stmt.executeQuery(statement);
 	%>
 	<table>
@@ -85,12 +89,12 @@ table, th, td {
 		while (result.next()) {
 		%>
 		<tr>
-			<td><%=result.getString("scheduled")%></td>
-			<td><%=result.getString("start_station")%></td>
-			<td><%=result.getString("stop_station")%></td>
-			<td><%=result.getString("stop_num")%></td>
-			<td><%=result.getString("stop_departure")%></td>
-			<td><%=result.getString("stop_arrival")%></td>
+			<td><%=result.getString("c1")%></td>
+			<td><%=result.getString("c2")%></td>
+			<td><%=result.getString("c3")%></td>
+			<td><%=result.getString("c4")%></td>
+			<td><%=result.getString("c5")%></td>
+			<td><%=result.getString("c6")%></td>
 
 
 			<%
