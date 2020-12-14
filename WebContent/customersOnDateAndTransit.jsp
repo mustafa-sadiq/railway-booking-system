@@ -11,7 +11,7 @@ pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <body>
 
 
-
+<a href ='customerRepresentativePage.jsp'>Back to home</a>
 <%
 ApplicationDB db = new ApplicationDB();
 Connection con = db.getConnection();
