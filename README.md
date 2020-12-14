@@ -5,7 +5,7 @@
 ### Submission checklist
 - [ ] Project code (zip file)
 - [ ] Schema SQL file
-- [ ] ER Diagram
+- [X] ER Diagram
 - [ ] README
   - [ ] EC2 URL
   - [ ] Amazon EC2 and Apache Tomcat credentials (PEM file)
