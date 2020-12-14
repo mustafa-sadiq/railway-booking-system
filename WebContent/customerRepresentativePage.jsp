@@ -30,7 +30,7 @@
 
 
 	<br />
-	<a href='logout.jsp'>edit and delete information for train
+	<a href='representativeEditDeleteSchedule.jsp'>edit and delete information for train
 		schedules</a>
 		
 	<br />
