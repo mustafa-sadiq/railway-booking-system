@@ -9,6 +9,7 @@
 <title>Schedule</title>
 </head>
 <body>
+<a href="customerPage.jsp">Back</a>
 <%
 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd"); 
 LocalDateTime now = LocalDateTime.now(); 
