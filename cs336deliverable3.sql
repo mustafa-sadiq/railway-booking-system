@@ -84,16 +84,28 @@ Insert into EMPLOYEES values ("111-11-1111", "Gary", "Gary", "employee1", "emplo
 Insert into FORUM values (1, "parth123", "hello", "hello", "employee1", "yo"),
 						(2, "mustu123", "hi", "hi", "employee2", "hola");
                         
-Insert into SCHEDULES values (1, 0001, "NJ express", 100),
-							(2, 0002, "NJ expressv2", 100);
+Insert into SCHEDULES values (1, 0001, "North express", 100),
+							(2, 0002, "South express", 100),
+                            (3, 0003, "NJ express", 150);
 
-Insert into STATIONS values (100, "Tomato", "NJ", "Union"),
-						(101, "Onion", "NJ", "Elizabeth"),
-						(102, "Potato", "NJ", "Roselle Park");
+Insert into STATIONS values (100, "Union station", "NJ", "Union"),
+						(101, "Elizabeth station", "NJ", "Elizabeth"),
+						(102, "Roselle station", "NJ", "Roselle Park"),
+                        (103, "Edison station", "NJ", "Edison"),
+                        (104, "New Bruns station", "NJ", "New Brunswick"),
+                        (105, "Piscataway station", "NJ", "Piscataway");
                         
 Insert into STOPS values (1, 100, 101, 1, "9:00:00", "10:00:00"),
 						(1, 101, 102, 2, "10:15:00", "11:15:00"),
-                        (2, 100, 101, 1, "11:00:00", "12:00:00");
-Insert into RESERVATION values(1,5.1,'2020-12-9','parth123',100,101,1,true,'employee1'),
-							(2,5.2,'2020-12-8','mustu123',101,100,1,true,'employee1'),
-                            (3,5.3,'2020-12-7','parth123',100,102,1,true,'employee1');
+                        (1, 102, 103, 3, "11:30:00", "12:30:00"),
+                        (1, 103, 104, 4, "13:00:00", "14:00:00"),
+                        (1, 104, 105, 5, "14:30:00", "15:30:00"),
+                        (2, 105, 104, 1, "11:00:00", "12:00:00"),
+                        (2, 104, 103, 2, "12:30:00", "13:45:00"),
+                        (2, 103, 102, 3, "14:00:00", "14:30:00"),
+                        (2, 102, 101, 4, "14:45:00", "15:15:00"),
+                        (2, 101, 100, 5, "15:30:00", "16:00:00"),
+                        (3, 101, 103, 1, "10:00:00", "11:30:00"),
+                        (3, 103, 105, 2, "12:00:00", "13:30:00"),
+                        (3, 105, 103, 3, "14:00:00", "15:30:00"),
+                        (3, 103, 100, 4, "16:00:00", "18:00:00");
