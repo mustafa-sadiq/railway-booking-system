@@ -9,7 +9,6 @@
 <title>Your Reservations</title>
 </head>
 <body>
-<a href='customerPage.jsp'>Back</a>
 <%
 ApplicationDB db = new ApplicationDB();	
 Connection con = db.getConnection();
@@ -32,17 +31,17 @@ String reservation_query =("select rs.reservation_num as c1, rs.reservation_date
 +" on s2.station_id = rs.destination"
 +" where rs.cust_username =\""+username+ "\";");
 ResultSet result = stmt.executeQuery(reservation_query);
-
+out.print("To cancel a reservation that is not past the reservation date, click on the associated reservation number.");
 out.print("<table>");
 
 out.print("<tr>");
 
 out.print("<td>");
-out.print("Reservation #");
+out.print("Date");
 out.print("</td>");
 
 out.print("<td>");
-out.print("Date");
+out.print("Reservation #");
 out.print("</td>");
 
 out.print("<td>");
@@ -65,9 +64,6 @@ out.print("<td>");
 out.print("Cost");
 out.print("</td>");
 
-out.print("<td>");
-out.print("Cancel?");
-out.print("</td>");
 	
 out.print("</tr>");
 
@@ -75,13 +71,19 @@ while(result.next()){
 	out.print("<tr>");
 	
 	out.print("<td>");
-	String c1 = result.getString("c1");
-	out.print(c1);
+	String c2 = result.getString("c2");
+	out.print(c2);
 	out.print("</td>");
 	
 	out.print("<td>");
-	String c2 = result.getString("c2");
-	out.print(c2);
+	Date d2 = sdf.parse(c2);
+	String c1 = result.getString("c1");
+	if(d1.compareTo(d2) < 0){
+		out.print("<a href=\"cancelReservation.jsp?res_num="+c1+"\">"+c1+"</a>");
+	}
+	else{
+		out.print(c1);
+	}
 	out.print("</td>");
 	
 	out.print("<td>");
@@ -113,17 +115,7 @@ while(result.next()){
 	String c7 = result.getString("c7");
 	out.print(c7);
 	out.print("</td>");
-	
-	out.print("<td>");
-	Date d2 = sdf.parse(c2);
-	if(d1.compareTo(d2) < 0){
-		out.print("<form method = \"get\" action = \"cancelReservation.jsp\" >");
-		out.print("<input type = \"hidden\" value = \"" +c1+ "\" name =\"res_num\">");
-		out.print("<input type = \"submit\" value = \"cancel\">"); 
-	}
-	else{
-		out.print("Invalid");
-	}
+
 	out.print("</td>");
 }
 out.print("</table");
