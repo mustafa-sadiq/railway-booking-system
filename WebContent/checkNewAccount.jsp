@@ -33,9 +33,7 @@
 			//Make a SELECT query from the table specified by the 'command' parameter at the index.jsp
 			String employee = "SELECT * FROM EMPLOYEES WHERE employee_username='" + userid + "'";
 			ResultSet result = stmt.executeQuery(employee);
-			result.next();
-			
-			if (result.next() == false){
+			if (result.next() == true){
 				throw new SQLException();
 			}		
 			
