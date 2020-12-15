@@ -26,14 +26,15 @@ while(result.next()){
 out.print("</select>");
 %>
 <td> Sort by: </td><select name="sort_by" size=1>
-			<option value="stop_arrival">Arrival</option>
-			<option value="stop_departure">Departure</option>
+			<option value="st.stop_arrival">Arrival</option>
+			<option value="st.stop_departure">Departure</option>
+			<option value="fare">Fare</option>
 		</select>&nbsp;<br> <input type="submit" value="filter">
 </form>
 <%
 String transit = request.getParameter("transit_id");
 String sort_by = request.getParameter("sort_by");
-String stop_query = ("select sch.transit_name as c1, s1.station_name as c2, s2.station_name as c3, st.stop_departure as c4, st.stop_arrival as c5"
+String stop_query = ("select sch.transit_name as c1, s1.station_name as c2, s2.station_name as c3, st.stop_departure as c4, st.stop_arrival as c5, sch.fare as c6"
 +" from STOPS as st"
 +" join SCHEDULES as sch"
 +" on sch.schedule_id = st.scheduled"
@@ -42,32 +43,28 @@ String stop_query = ("select sch.transit_name as c1, s1.station_name as c2, s2.s
 +" join STATIONS as s2"
 +" on s2.station_id = st.stop_station"
 +" where st.scheduled = "+transit+
-" order by st."+sort_by+";");
+" order by "+sort_by+";");
 ResultSet resultTwo = stmt.executeQuery(stop_query);
 out.print ("<table>");
-
 out.print("<tr>");
-
 out.print("<td>");
 out.print("Transit Name");
 out.print("</td>");
-
 out.print("<td>");
 out.print("Origin");
 out.print("</td>");
-
 out.print("<td>");
 out.print("Destination");
 out.print("</td>");
-
 out.print("<td>");
 out.print("Arrival");
 out.print("</td>");
-
 out.print("<td>");
 out.print("Departure");
 out.print("</td>");
-
+out.print("<td>");
+out.print("Fare");
+out.print("</td>");
 while(resultTwo.next()){
 	out.print("<tr>");
 	
@@ -95,6 +92,11 @@ while(resultTwo.next()){
 	String c5 = resultTwo.getString("c5");
 	out.print(c5);
 	out.print("</td>");
+	out.print("<td>");
+	String c6 = resultTwo.getString("c6");
+	out.print(c6);
+	out.print("</td>");
+
 }
 out.print("</table>");
 con.close();
