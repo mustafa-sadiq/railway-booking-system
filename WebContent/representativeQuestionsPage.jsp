@@ -38,7 +38,7 @@ table, th, td {
 	<br />
 	<br />
 
-	<form method="get" action="filterQuestions.jsp">
+	<form method="get" action="representativeFilterQuestions.jsp">
 		Keyword: <input type="text" name="keyword"> <input
 			type="submit" value="Filter">
 	</form>
