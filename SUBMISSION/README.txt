@@ -6,7 +6,7 @@ username: cs336group30
 password: cs336group30
 
 CREDIT APPORTION:
-
+Everyone contributed equally
 
 ADMIN CREDENTIALS:
 username: admin
